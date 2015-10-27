@@ -1,0 +1,63 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+  <!--Bootstrap-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!--Fontawesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <title>MVCDemo</title>
+</head>
+<!-- breadcrumbs -->
+<body>
+  <ol class="breadcrumb">
+    <li class="active"><a href="index.html">Dashboard</a></li>
+    <li><a href="apihelp.html">API Help</a></li>
+  </ol>
+<div>
+  <!-- breadcrumbs -->
+  &nbsp;
+ 
+  &nbsp;
+  <!--start of full viewport divider -->
+    <div class="row" style="padding-left:30px; padding-right:30px;" ng-controller="AppCtrl">
+      <div class="col-xs-6 col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item"><span class="badge">{{data binding not working}}</span>Devices</li>
+            <li class="list-group-item"><span class="badge">{{data binding not working}}</span>Users</li>
+          </ul>
+          <!-- start of button -->
+          <div class="input-group">
+            <span class="input-group-addon"><a href=""><i class="fa fa-search"></i></a></span>
+            <input type="text" class="form-control" type="text" placeholder="Search for device">
+          </div>
+          <!-- end of button -->
+        </div>
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <p class="lead text-primary"><i class="fa fa-sellsy fa-2x"> Host Records</i></p>
+        <p class="lead"><a href="/"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;Get a clear and concise overview of all the registered <a href="">devices</a> in your <a href="">environment</a><br></p>
+        <p class="lead"><a href="dm.html"><i class="fa fa-server"></i></a>&nbsp;&nbsp;Add / Remove / Edit devices using the <a href="dm.html">Device Manager</a></p>
+        <p class="lead"><a href="/"><i class="fa fa-terminal"></i></a>&nbsp;&nbsp;Open an on screen console to online devices</p>
+        <p class="lead"><a href="/"><i class="fa fa-user-plus"></i></a>&nbsp;&nbsp;Manage Users</p>
+      </div>
+    </div>
+    <!--end of full viewport divider -->
+
+    <div class="row" style="padding-left:30px; padding-right:30px; padding-top:30px; padding-bottom:30px" ng-controller="AppCtrl">
+      <!-- large container content goes here -->
+      <!-- large container content goes here -->
+      <!-- large container content goes here -->
+      <!-- large container content goes here -->
+      <!-- large container content goes here -->
+    </div>
+
+  <!-- load scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular-animate.min.js"></script>
+  <script src="/controllers/controller.js"></script>
+</body>
+
+</html>
+

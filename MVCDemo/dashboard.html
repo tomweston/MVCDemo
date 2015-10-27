@@ -1,0 +1,114 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+  <!--Bootstrap-->
+  <!--Latest compiled and minified CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!--Defining theme-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!--Fontawesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!--Ionicicons-->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!--style.css-->
+  <link rel="stylesheet" href="./Content/leftsidebar.css">
+  <title>MVCDemo - Dashboard</title>
+</head>
+
+<body>
+  <!--start of breadcrumbs -->
+  <ol class="breadcrumb">
+  <li><a href="/">Dashboard</a></li>
+  <li><a href="/">Device Details</a></li>
+  <li><a href="#">Using the API</a></li>
+  </ol>
+  <!--end of breadcrumbs -->
+   <!--start of full dashboardViewModel viewport divider -->
+    <div class="row" style="padding-left:30px; padding-right:30px;" ng-controller="dashboardViewModel"><!-- set viewport div angular controller to dashboardViewModel that will control all databindings within the vewport-->
+      <!-- start of left content pain -->
+      <div class="col-xs-6 col-md-2">   
+          <!-- start of search box -->
+          <div class="input-group">
+            <span class="input-group-addon"><a href=""><i class="fa fa-search"></i></a></span>
+            <input type="text" class="form-control" type="text" placeholder="Search for device">
+          </div>
+          <!-- end of search box -->
+        </div>
+        <!-- end of left content pain -->
+        <!-- start of right content pain -->
+      <div class="table-responsive">
+        <div class="container">
+           <h1><i class="fa fa-server"></i>  Dashboard</h1>
+           <p class="lead"><a href="/"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;Get a clear and concise overview of all the registered <a href="">devices</a> in your environment<br></p>
+           <p class="lead"><a href="/"><i class="fa fa-refresh fa-spin"></i></a>&nbsp;&nbsp;No need to refresh the page. We do that for you.. Every 5 seconds!<br></p>
+           &nbsp;
+           &nbsp;
+           &nbsp;
+         
+        <table class="table table-hover">
+         <thead>
+            <tr>
+              <th class="col-sm-1">OS</th>
+              <th>Device ID</th>
+              <th>Role</th>
+              <th>Model</th>
+              <th class="col-sm-3">Memory</th>
+              <th class="col-sm-3">CPU</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- start of first table row (this needs to be an ngrepeat not static pulling from ng-controller called "dashboardViewModel") -->
+            <tr>
+              <td><h2><i class="ion-social-windows"></i></h2></td><!-- icon decided by array value in OS and inserted with {{databinding}} from dashboardViewModel -->
+              <td><p style="padding-top:20px"><a href="#">{{databinding}}</a></p></td>
+              <td><p style="padding-top:20px">{{databinding}}</p></td>
+              <td><p style="padding-top:20px">{{databinding}}</p></td>
+              <td><p style="padding-top:10px"><div class="progress">
+                  <!-- insert dashboardViewModel memory {{databinding}} into aria-valuenow"" / width value / written value below-->
+                  <div class="progress-bar" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 23%;">
+                   23%
+                 </div>
+               </div></p></td>
+              <td><p style="padding-top:10px"><div class="progress">
+                  <!-- insert dashboardViewModel cpu {{databinding}} into aria-valuenow"" / width value / written value below-->
+                  <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 68%;">
+                   68%
+                 </div>
+               </div></p></td>
+            </tr>
+            <!-- end of first table row -->
+            <!-- start of second table row (this ideally needs to be an ngrepeat of all entries in the array and not staticly defined below) -->
+            <tr>
+              <td><h2><i class="ion-social-tux"></i></h2></td><!-- icon decided by array value in OS and inserted with {{databinding}} from dashboardViewModel -->
+              <td><p style="padding-top:20px"><a href="#">{{databinding}}</a></p></td>
+              <td><p style="padding-top:20px">{{databinding}}</p></td>
+              <td><p style="padding-top:20px">{{databinding}}</p></td>
+              <td><p style="padding-top:10px"><div class="progress">
+                  <!-- insert dashboardViewModel memory {{databinding}} into aria-valuenow"" / width value / written value below-->
+                  <div class="progress-bar" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 17%;">
+                   17%
+                 </div>
+               </div></p></td>
+              <td><p style="padding-top:10px"><div class="progress">
+                  <!-- insert dashboardViewModel cpu {{databinding}} into aria-valuenow"" / width value / written value below -->
+                  <div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 84%;">
+                   84%
+                 </div>
+               </div></p></td>
+            </tr>
+            <!-- end of second table row -->
+          </tbody>
+        </table>
+      </div> 
+     </div>
+ <!-- end of right content pain -->
+ </div>
+ <!--end of full viewport divider controlled by dashboardViewModel-->
+ 
+ <!--start of scripts --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular-animate.min.js"></script>
+  <script src="/controllers/controller.js"></script>
+  <!--end of scripts --> 
+</body>
+</html>
